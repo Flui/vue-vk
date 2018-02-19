@@ -1,4 +1,4 @@
-import { colorStringToColorHash } from './index';
+import { colorStringToColorHash } from './utils';
 
 describe('colorStringToColorHash', () => {
   it('parse valid colors', () => {
