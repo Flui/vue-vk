@@ -1,4 +1,12 @@
 import VKApp from './VKApp.vue';
+import { AppMode } from './constants';
 
-export { VKAppMode } from './constants';
-export default VKApp;
+const plugin = {
+  install(Vue) {
+    Vue.component(VKApp.name, VKApp);
+  },
+  AppMode,
+};
+
+
+export default plugin;

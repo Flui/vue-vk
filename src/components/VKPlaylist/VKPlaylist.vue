@@ -5,6 +5,7 @@
 <script>
 import { injectVKOpenApi } from "../../core";
 export default {
+  name: 'vk-playlist',
   props: {
     ownerId: {
       type: Number,

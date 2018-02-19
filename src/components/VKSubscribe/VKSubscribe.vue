@@ -6,6 +6,7 @@
 import { injectVKOpenApi, initVK } from "../../core";
 
 export default {
+  name: 'vk-subscribe',
   props: {
     ownerId: {
       type: Number,

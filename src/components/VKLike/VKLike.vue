@@ -7,6 +7,7 @@
 import { injectVKOpenApi, initVK } from "../../core";
 
 export default {
+  name: 'vk-like',
   props: {
     buttonHeight: {
       type: Number

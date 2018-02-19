@@ -1,4 +1,11 @@
 import VKShare from './VKShare.vue';
+import { ShareButtonType } from './constants';
 
-export { VKShareButtonType } from './constants';
-export default VKShare;
+const plugin = {
+  install(Vue) {
+    Vue.component(VKShare.name, VKShare);
+  },
+  ShareButtonType,
+};
+
+export default plugin;

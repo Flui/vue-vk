@@ -1,4 +1,11 @@
 import VKLike from './VKLike.vue';
+import { LikeButtonType } from './constants';
 
-export { VKLikeButtonType } from './constants';
-export default VKLike;
+const plugin = {
+  install(Vue) {
+    Vue.component(VKLike.name, VKLike);
+  },
+  LikeButtonType,
+};
+
+export default plugin;

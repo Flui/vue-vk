@@ -1,5 +1,5 @@
 /* eslint import/prefer-default-export: 0 */
-export const VKLikeButtonType = {
+export const LikeButtonType = {
   BUTTON_WITH_MINI_COUNTER: 'button',
   BUTTON_WITH_TEXT_COUNTER: 'full',
   MINI_BUTTON: 'mini',

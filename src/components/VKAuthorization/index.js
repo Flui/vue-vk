@@ -1,3 +1,9 @@
 import VKAuthorization from './VKAuthorization.vue';
 
-export default VKAuthorization;
+const plugin = {
+  install(Vue) {
+    Vue.component(VKAuthorization.name, VKAuthorization);
+  },
+};
+
+export default plugin;

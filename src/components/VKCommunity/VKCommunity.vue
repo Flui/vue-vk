@@ -7,6 +7,7 @@ import { injectVKOpenApi } from '../../core';
 import { colorStringToColorHash } from '../../core/utils';
 
 export default {
+  name: 'vk-community',
   props: {
     width: {
       type: [String, Number],

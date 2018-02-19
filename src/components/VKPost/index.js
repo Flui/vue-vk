@@ -1,3 +1,9 @@
 import VKPost from './VKPost.vue';
 
-export default VKPost;
+const plugin = {
+  install(Vue) {
+    Vue.component(VKPost.name, VKPost);
+  },
+};
+
+export default plugin;

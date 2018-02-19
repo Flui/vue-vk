@@ -6,6 +6,7 @@
 import { injectVKOpenApi, initVK } from "../../core";
 
 export default {
+  name: 'vk-auth',
   props: {
     /*
      * sets module width in pixels (integer > 300)

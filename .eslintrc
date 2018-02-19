@@ -8,5 +8,10 @@
     "browser": true,
     "node": true,
     "jest": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+        "modules": true
+    }
   }
 }

@@ -1,5 +1,5 @@
 /* eslint import/prefer-default-export: 0 */
-export const VKShareButtonType = {
+export const ShareButtonType = {
   BUTTON: 'round',
   BUTTON_WITHOUT_COUNTER: 'round_nocount',
   LINK: 'link',

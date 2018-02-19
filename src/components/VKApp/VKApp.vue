@@ -6,6 +6,7 @@
 import { injectVKOpenApi } from '../../core';
 
 export default {
+  name: 'vk-app',
   props: {
     appId: {
       type: Number,

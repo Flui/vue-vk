@@ -1,4 +1,11 @@
 import VKComments from './VKComments.vue';
+import { AttachmentTypes } from './constants';
 
-export { ATTACHMENT_TYPES } from './constants';
-export default VKComments;
+const plugin = {
+  install(Vue) {
+    Vue.component(VKComments.name, VKComments);
+  },
+  AttachmentTypes,
+};
+
+export default plugin;

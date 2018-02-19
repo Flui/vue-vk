@@ -4,6 +4,7 @@
 <script>
 import { injectVKOpenApi } from "../../core";
 export default {
+  name: 'vk-post',
   props: {
     ownerId: {
       type: Number,

@@ -1,2 +1,9 @@
 /* eslint import/prefer-default-export: 0 */
-export const ATTACHMENT_TYPES = ['graffiti', 'photo', 'audio', 'video', 'link'];
+export const AttachmentTypes = {
+  ALL: '*',
+  GRAFFITI: 'graffiti',
+  PHOTO: 'photo',
+  AUDIO: 'audio',
+  VIDEO: 'video',
+  LINK: 'link',
+};

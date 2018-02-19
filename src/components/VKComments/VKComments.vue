@@ -4,9 +4,10 @@
 
 <script>
 import { injectVKOpenApi, initVK } from '../../core';
-import { ATTACHMENT_TYPES } from './constants';
+import { AttachmentTypes } from './constants';
 
 export default {
+  name: 'vk-comments',
   props: {
     width: {
       type: Number,
@@ -24,7 +25,7 @@ export default {
     attach: {
       type: String,
       default: "*",
-      validator: value => ["*", ...ATTACHMENT_TYPES].includes(value)
+      validator: value => Object.values(AttachmentTypes).includes(value)
     },
     autoPublish: {
       type: Boolean,

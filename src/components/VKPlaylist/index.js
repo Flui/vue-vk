@@ -1,3 +1,9 @@
 import VKPlaylist from './VKPlaylist.vue';
 
-export default VKPlaylist;
+const plugin = {
+  install(Vue) {
+    Vue.component(VKPlaylist.name, VKPlaylist);
+  },
+};
+
+export default plugin;

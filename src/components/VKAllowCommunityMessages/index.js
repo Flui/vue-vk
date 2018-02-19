@@ -1,3 +1,9 @@
 import VKAllowCommunityMessages from './VKAllowCommunityMessages.vue';
 
-export default VKAllowCommunityMessages;
+const plugin = {
+  install(Vue) {
+    Vue.component(VKAllowCommunityMessages.name, VKAllowCommunityMessages);
+  },
+};
+
+export default plugin;

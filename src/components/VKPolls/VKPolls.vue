@@ -6,6 +6,7 @@
 import { injectVKOpenApi, initVK } from "../../core";
 
 export default {
+  name: 'vk-polls',
   props: {
     pollId: {
       type: String,

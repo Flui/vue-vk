@@ -1,3 +1,9 @@
 import VKCommunityMessages from './VKCommunityMessages.vue';
 
-export default VKCommunityMessages;
+const plugin = {
+  install(Vue) {
+    Vue.component(VKCommunityMessages.name, VKCommunityMessages);
+  },
+};
+
+export default plugin;

@@ -63,13 +63,18 @@
     "vue": "^2.5.13"
   },
   "jest": {
+    "verbose": true,
     "moduleFileExtensions": [
       "js",
       "vue"
     ],
     "transform": {
-      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
-      ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue-preprocessor"
-    }
+      "^.+\\.js$": "babel-jest",
+      ".*\\.(vue)$": "jest-vue-preprocessor"
+    },
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ]
   }
 }

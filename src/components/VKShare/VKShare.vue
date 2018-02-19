@@ -4,14 +4,15 @@
 
 <script>
 import { injectVKShareApi } from '../../core';
-import { VKShareButtonType } from './constants';
+import { ShareButtonType } from './constants';
 
 export default {
+  name: 'vk-share',
   props: {
     type: {
       type: String,
       isRequired: true,
-      default: VKShareButtonType.BUTTON
+      default: ShareButtonType.BUTTON
     },
     text: {
       type: String,

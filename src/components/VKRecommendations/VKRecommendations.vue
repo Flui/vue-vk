@@ -6,6 +6,7 @@
 import { injectVKOpenApi, initVK } from "../../core";
 
 export default {
+  name: 'vk-recommendations',
   props: {
     limit: {
       type: Number,

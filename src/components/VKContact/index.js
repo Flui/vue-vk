@@ -1,3 +1,9 @@
 import VKContact from './VKContact.vue';
 
-export default VKContact;
+const plugin = {
+  install(Vue) {
+    Vue.component(VKContact.name, VKContact);
+  },
+};
+
+export default plugin;

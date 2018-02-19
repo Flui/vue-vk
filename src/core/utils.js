@@ -6,7 +6,7 @@ import parseColor from 'parse-color';
  */
 export function swapKeyValue(object) {
   return Object.keys(object).reduce((obj, key) => {
-    const updatedObj = { ...obj };
+    const updatedObj = obj;
     updatedObj[object[key]] = key;
     return updatedObj;
   }, {});
