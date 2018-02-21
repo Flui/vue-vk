@@ -13,7 +13,7 @@ import VKRecommendations from './VKRecommendations';
 import VKShare from './VKShare';
 import VKSubscribe from './VKSubscribe';
 
-export {
+const components = [
   VKAllowCommunityMessages,
   VKApp,
   VKAuthorization,
@@ -28,4 +28,12 @@ export {
   VKRecommendations,
   VKShare,
   VKSubscribe,
+];
+
+export default {
+  install: (Vue) => {
+    components.forEach((component) => {
+      Vue.use(component);
+    });
+  },
 };

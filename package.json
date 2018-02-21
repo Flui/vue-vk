@@ -1,14 +1,16 @@
 {
   "name": "vue-vk",
-  "version": "0.0.1",
+  "version": "0.1.3",
   "description": "Provides a simple layer on top of the VK widget iframe api.",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "files": [
     "dist",
-    "build"
+    "src"
   ],
   "scripts": {
-    "build": "babel src -d build",
-    "build:watch": "babel src -w -d build",
+    "build": "webpack --progress --colors",
+    "build:watch": "webpack --progress --colors --watch",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "jest",
     "test:coverage": "jest --coverage",
@@ -53,6 +55,7 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.6.1",
+    "fs": "^0.0.1-security",
     "jest": "^22.3.0",
     "jest-vue-preprocessor": "^1.3.1",
     "regenerator-runtime": "^0.11.1",

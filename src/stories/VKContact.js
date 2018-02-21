@@ -17,7 +17,7 @@ export const story = () => {
   return {
     components: { VKContact },
     template: `<vk-contact
-      :ownerId=${ownerId}
+      :ownerId="${ownerId}"
       buttonText="${buttonText}"
       :buttonHeight="${buttonHeight}"
     ></vk-contact>`,

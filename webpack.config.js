@@ -1,39 +1,32 @@
 var webpack = require('webpack');
 var path = require('path');
+var fs = require('fs');
+var { version } = require('./package.json');
 
+const plugins = []
 
 // Naming and path settings
-var appName = 'app';
-var entryPoint = './src/main.js';
-var exportPath = path.resolve(__dirname, './build');
-
-// Enviroment flag
-var plugins = [];
-var env = process.env.WEBPACK_ENV;
-
-// Differ settings based on production flag
-if (env === 'production') {
-  var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
-
-  plugins.push(new UglifyJsPlugin({ minimize: true }));
-  plugins.push(new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"production"'
+function getEntries(pathToEntriepoints, excludes) {
+  return fs.readdirSync(pathToEntriepoints)
+    .reduce((entries, file) => {
+      const name = file.split(".")[0];
+      const path = pathToEntriepoints + file;
+      if (!excludes || !excludes.includes(name)) {
+        entries[name] = path;
       }
-    }
-  ));
-
-  appName = appName + '.min.js';
-} else {
-  appName = appName + '.js';
+      return entries;
+    }, {});
 }
+
+var exportPath = path.resolve(__dirname, './dist');
+
 
 // Main Settings config
 module.exports = {
-  entry: entryPoint,
+  entry: getEntries('./src/components/'),
   output: {
     path: exportPath,
-    filename: appName
+    filename: `[name].js`
   },
   module: {
     loaders: [
