@@ -2,16 +2,21 @@
   "name": "vue-vk",
   "version": "0.0.1",
   "description": "Provides a simple layer on top of the VK widget iframe api.",
-  "main": "lib/index.js",
+  "files": [
+    "dist",
+    "build"
+  ],
   "scripts": {
-    "dev": "WEBPACK_ENV=dev webpack --progress --colors --watch",
-    "build": "WEBPACK_ENV=production webpack",
+    "build": "babel src -d build",
+    "build:watch": "babel src -w -d build",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
-    "lint": "eslint src",
-    "lint:travis": "travis-lint .travis.yml"
+    "lint": "eslint src/**",
+    "lint:watch": "esw -w src/**",
+    "lint:travis": "travis-lint .travis.yml",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -36,6 +41,7 @@
     "@storybook/addon-knobs": "^3.3.13",
     "@storybook/addon-notes": "^3.3.13",
     "@storybook/vue": "^3.3.13",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-jest": "^22.2.2",
     "babel-loader": "^7.1.2",
